@@ -7,7 +7,7 @@ public class destory : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		Destroy(gameObject,3);			//3ÃëºóÏú»ÙÅÚµ¯ 
+		Destroy(gameObject, 3);			//3ç§’åé”€æ¯ç‚®å¼¹
 	}
 	
 }
