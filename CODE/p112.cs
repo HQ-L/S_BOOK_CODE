@@ -14,8 +14,8 @@ public class shoot : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		float x = Input.GetAxis("horizontal")*Time.deltaTime*speed;
-		float z = Input.GetAxis("Vertical")*Time.deltaTime*speed;
+		float x = Input.GetAxis("horizontal") * Time.deltaTime * speed;
+		float z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
 		transform.Translate(x, 0, z);
 		print(x);
 	}
