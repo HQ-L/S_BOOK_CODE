@@ -1,5 +1,5 @@
 void EXTI2_IRQHandler(void)
 {
-// Âß¼­´úÂë²¿·Ö;
+//é€»è¾‘ä»£ç éƒ¨åˆ†ï¼›
 	EXTI_ClearITPendingBit(EXTI_Line2);
 }
