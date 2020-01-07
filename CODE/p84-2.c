@@ -1,4 +1,4 @@
-//float 类型变量的声名及使用示例 
+//float 绫诲瀷鍙橀噺鐨勫０鏄庡強浣跨敤绀轰緥 
 	float a = 10;
 	float b = 3;
 	float c = a/b;
