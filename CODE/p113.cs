@@ -5,38 +5,38 @@ public class shoot : MonoBehaviour
 	{
 		
 	}
-	public int speed = 30;																	//¶¨Òå¹«ÓĞ±äÁ¿ĞŞ¸ÄËÙ¶ÈÎª30
-	public Transform newobject;																//¶¨Òå¹«ÓĞ±äÁ¿ ĞÂÎïÌå
+	public int speed = 30;										//å®šä¹‰å…¬æœ‰å˜é‡ä¿®æ”¹é€Ÿåº¦ä¸º30
+	public Transform newobject;									//å®šä¹‰å…¬æœ‰å˜é‡ æ–°ç‰©ä½“
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		float x = Input.GetAxis("horizontal")*Time.deltaTime*speed;							//Èç¹û¼ì²âµ½¼üÅÌAD¼ü°´ÏÂ£¬½«º¯Êı·µ»ØµÄÖµ³ËÒÔÊ±¼äºÍËÙ¶ÈÎªÎ»ÒÆ 
-		float z = Input.GetAxis("Vertical")*Time.deltaTime*speed;							//Èç¹û¼ì²âµ½¼üÅÌWS¼ü°´ÏÂ£¬½«º¯Êı·µ»ØµÄÖµ³ËÒÔÊ±¼äºÍËÙ¶ÈÎªÎ»ÒÆ 
+		float x = Input.GetAxis("horizontal") * Time.deltaTime * speed;				//å¦‚æœæ£€æµ‹åˆ°é”®ç›˜ADé”®æŒ‰ä¸‹ï¼Œå°†å‡½æ•°è¿”å›çš„å€¼ä¹˜ä»¥æ—¶é—´å’Œé€Ÿåº¦ä¸ºä½ç§» 
+		float z = Input.GetAxis("Vertical") * Time.deltaTime * speed;				//å¦‚æœæ£€æµ‹åˆ°é”®ç›˜WSé”®æŒ‰ä¸‹ï¼Œå°†å‡½æ•°è¿”å›çš„å€¼ä¹˜ä»¥æ—¶é—´å’Œé€Ÿåº¦ä¸ºä½ç§» 
 		transform.Translate(x, 0, z);
 		
-		if(Input.GetButtonDown("Firel"))													//Èç¹û¼ì²âµ½Êó±ê×ó¼ü°´ÏÂ 
+		if(Input.GetButtonDown("Firel"))							//å¦‚æœæ£€æµ‹åˆ°é¼ æ ‡å·¦é”®æŒ‰ä¸‹ 
 		{
-			Transform n = Instantiate(newobject, transform.position, transform.rotation);	//¶¨ÒåTransformÎïÌåĞÍ±äÁ¿n£¬ÒıÓÃnewobject£¬ºóÃæÁ½¸ö²ÎÊıÊ±Î»ÖÃºÍĞı×ª½Ç¶È
-			Vector3 fwd = transform.TransformDirection(Vector3.forward);					//ÅÚµ¯·¢Éä·½ÏòËæÖ÷ÉãÏñÍ·³¯ÏòÒÆ¶¯
-			n.GetComponent<Rigidbody>().AddForce(fwd * 2800*5);								//µ÷ÓÃnÎïÌåµÄ¸ÕÌå×é¼şÖĞµÄº¯ÊıAddForceÌí¼ÓÁ¦2800*5N 
+			Transform n = Instantiate(newobject, transform.position, transform.rotation);	//å®šä¹‰Transformç‰©ä½“å‹å˜é‡nï¼Œå¼•ç”¨newobjectï¼Œåé¢ä¸¤ä¸ªå‚æ•°æ—¶ä½ç½®å’Œæ—‹è½¬è§’åº¦
+			Vector3 fwd = transform.TransformDirection(Vector3.forward);			//ç‚®å¼¹å‘å°„æ–¹å‘éšä¸»æ‘„åƒå¤´æœå‘ç§»åŠ¨
+			n.GetComponent<Rigidbody>().AddForce(fwd * 2800 * 5);				//è°ƒç”¨nç‰©ä½“çš„åˆšä½“ç»„ä»¶ä¸­çš„å‡½æ•°AddForceæ·»åŠ åŠ›2800*5N 
 		}
 		
 		if(Input.GetKey(KeyCode.Q))
 		{
-			transform.Rotate(0, -25*Time.deltaTime, 0, Space.Self);							//°´ÏÂQ¼üÏò×óĞı×ª
+			transform.Rotate(0, -25 * Time.deltaTime, 0, Space.Self);			//æŒ‰ä¸‹Qé”®å‘å·¦æ—‹è½¬
 		}
 		if(Input.GetKey(KeyCode.E))
 		{
-			transform.Rotate(0, 25*Time.deltaTime, 0, Space.Self);							//°´ÏÂE¼üÏòÓÒĞı×ª
+			transform.Rotate(0, 25 * Time.deltaTime, 0, Space.Self);			//æŒ‰ä¸‹Eé”®å‘å³æ—‹è½¬
 		}
 		if(Input.GetKey(KeyCode.Z))
 		{
-			transform.Rotate(-25*Time.deltaTime, 0, 0, Space.Self);							//°´ÏÂZ¼üÏòÉÏĞı×ª
+			transform.Rotate(-25 * Time.deltaTime, 0, 0, Space.Self);			//æŒ‰ä¸‹Zé”®å‘ä¸Šæ—‹è½¬
 		}
 		if(Input.GetKey(KeyCode.C))
 		{
-			transform.Rotate(25*Time.deltaTime, 0, 0, Space.Self);							//°´ÏÂC¼üÏòÏÂĞı×ª
+			transform.Rotate(25 * Time.deltaTime, 0, 0, Space.Self);			//æŒ‰ä¸‹Cé”®å‘ä¸‹æ—‹è½¬
 		}
 	}
 }
