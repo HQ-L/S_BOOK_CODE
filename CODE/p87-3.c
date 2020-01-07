@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(void)
 {
-	[ Óï¾ä ;]
+	[è¯­å¥;]
 	return 0;
 }
