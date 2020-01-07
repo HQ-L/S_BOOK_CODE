@@ -1,2 +1,2 @@
-	scanf("%d %c %f", &a, &b, &c);//输入函数
-	printf("%d %c %f", &a, &b, &c);//输出函数
+	scanf("%d %c %f", &a, &b, &c);//杈撳叆鍑芥暟
+	printf("%d %c %f", &a, &b, &c);//杈撳嚭鍑芥暟
