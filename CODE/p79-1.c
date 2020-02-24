@@ -16,4 +16,4 @@ typedef struct
 	__IO uint32_t IP[240];		/*	中断优先级寄存器		！< 偏移量： 0x300  Interrupt Priority Register(8Bit wide)*/ 
 	uint32_t RESERVED5[644];	/*	软件触发方式寄存器 	*/
 	__o  uint32_t STIR;					/*!<偏移量：0xE00  Software Trigger Interrupt Register		*/
-}	NVIC_Type;
+}NVIC_Type;
